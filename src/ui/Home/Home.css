@@ -1,0 +1,48 @@
+.home {
+  margin: 0;
+  padding: 0;
+  background-color: #1A1A1A;
+  min-height: 100vh;
+  color: white;
+  display: flex;
+  justify-content: center;
+  padding-bottom: 5%;
+}
+.home .main-content {
+  width: 85vw;
+  height: 80%;
+}
+.home .main-content .movies-container {
+  display: flex;
+  flex-flow: row wrap;
+}
+.home .main-content .pages-buttons {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 2%;
+}
+.home .main-content .pages-buttons .page-button {
+  color: white;
+  font-size: 18px;
+  padding: 1% 1.5%;
+  border-radius: 100%;
+  background-color: #80201E;
+  margin: 0 1%;
+}
+.home .main-content .pages-buttons .page-button:hover {
+  background-color: #C42521;
+}
+.home .main-content .pages-buttons .back-button, .home .main-content .pages-buttons .next-button {
+  background-color: transparent;
+}
+.home .main-content .pages-buttons .back-button, .home .main-content .pages-buttons .next-button, .home .main-content .pages-buttons .page-button {
+  border: none;
+  cursor: pointer;
+  transition: 0.1s linear;
+}
+.home .main-content .pages-buttons .back-button:hover, .home .main-content .pages-buttons .next-button:hover {
+  filter: invert(60%);
+}
+
+/*# sourceMappingURL=Home.css.map */

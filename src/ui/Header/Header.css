@@ -1,0 +1,56 @@
+.header {
+  margin: 0;
+  padding: 0;
+  display: grid;
+  grid-column: 1fr;
+  height: 23vh;
+}
+.header .logo-container {
+  display: flex;
+  align-items: center;
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  background-color: black;
+}
+.header .logo-container img {
+  width: 300px;
+  margin-left: 10%;
+}
+.header #search-form {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  background-color: #C42521;
+}
+.header #search-form div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: white;
+  border-radius: 5px;
+  width: 80%;
+  height: 65%;
+}
+.header #search-form div .search-field {
+  margin: 2% 0;
+  width: 90%;
+  border: none;
+  outline: none;
+}
+.header #search-form div .search-field, .header #search-form div img {
+  height: 70%;
+}
+
+@media (max-width: 1000px) {
+  .header {
+    display: flex;
+    justify-content: center;
+  }
+  .header .logo-container img {
+    margin: 0;
+  }
+}
+
+/*# sourceMappingURL=Header.css.map */
