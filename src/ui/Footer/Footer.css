@@ -1,0 +1,26 @@
+.footer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-flow: column nowrap;
+  background-color: black;
+  color: white;
+}
+.footer .footer-logo {
+  width: 275px;
+  margin: 1% 0;
+}
+.footer .digital-stores-buttons {
+  width: 100%;
+  margin: 1% 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.footer .digital-stores-buttons .digital-store-button {
+  background-color: transparent;
+  cursor: pointer;
+  transform: scale(0.85);
+}
+
+/*# sourceMappingURL=Footer.css.map */

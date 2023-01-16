@@ -1,0 +1,29 @@
+@mixin flex(){
+	display: flex;
+	justify-content: center;
+	align-items: center;	
+}
+
+.footer{
+	@include flex;
+	flex-flow: column nowrap;
+	background-color: black;
+	color:white;
+
+	.footer-logo{
+		width: 275px;
+		margin:1% 0;
+	}
+
+	.digital-stores-buttons{
+		width:100%;
+		margin:1% 0;
+		@include flex;
+
+		.digital-store-button{
+			background-color:transparent;
+			cursor: pointer;
+			transform: scale(0.85);
+		}
+	}
+}

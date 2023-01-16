@@ -1,24 +1,14 @@
 import './Header.css';
-import Icon from './Icon';
+import Icon from '../Home/comps/Icon/Icon';
+import Logo from '../../imgs/logo/dct_2x.png';
+import React, { useState } from 'react';
 
-export default function Header({ img }) {
+export default function Header() {
     return (
         <header className='header'>
         	<figure className='logo-container'>
-        		<img src= { img } title='Website logo' alt='Website logo'/>
+        		<img src= { Logo } title='Website logo' alt='Website logo'/>
         	</figure>
-
-        	<form id='search-form'>
-        		<div>
-	        		<Icon />
-	        		<input
-	        			type='search'
-	        			name='search-field'
-	        			className='search-field'
-	        			placeholder='Title'
-	        		/>
-        		</div>
-        	</form>
         </header>
     );
 }

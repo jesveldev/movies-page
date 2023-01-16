@@ -6,7 +6,35 @@
   color: white;
   display: flex;
   justify-content: center;
+  align-items: center;
+  flex-flow: column nowrap;
   padding-bottom: 5%;
+}
+.home #search-form {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 11.5vh;
+  background-color: #C42521;
+}
+.home #search-form div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: white;
+  border-radius: 5px;
+  width: 80%;
+  height: 65%;
+}
+.home #search-form div .search-field {
+  margin: 2% 0;
+  width: 90%;
+  border: none;
+  outline: none;
+}
+.home #search-form div .search-field, .home #search-form div img {
+  height: 70%;
 }
 .home .main-content {
   width: 85vw;

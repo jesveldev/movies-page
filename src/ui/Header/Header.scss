@@ -13,10 +13,7 @@
 
     @include reset;
 
-    display: grid;
-    grid-column: 1fr;
-
-    height: 23vh;
+    height: 11.5vh;
 
     .logo-container{
 
@@ -33,37 +30,6 @@
         	margin-left: 10%;
         }
     }
-
-    #search-form{
-
-        @include flex;
-
-        width: 100%;
-        background-color:#C42521;
-
-        div{
-
-            @include flex;
-
-            background-color: white;
-            border-radius: 5px;
-
-            width: 80%;
-            height: 65%;
-
-            .search-field{
-                margin:2% 0;
-                width: 90%;
-                border:none;
-                outline: none;
-            }
-
-            .search-field, img{
-                height: 70%;
-            }
-
-        }
-    }
 }
 
 @media (max-width: 1000px) {
@@ -72,11 +38,9 @@
         justify-content: center;
 
         .logo-container{
-
             img{
             	margin:0;
             }
-
         }
     }
 }
