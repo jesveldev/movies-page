@@ -7,6 +7,7 @@ import compIcon from '../../imgs/icon/search@2x.png';
 import previousPage from '../../imgs/icon/left-chevron@2x.png';
 import nextPage from '../../imgs/icon/right-chevron@2x.png';
 import React, {useState, useEffect} from 'react';
+import { v4 as uuid } from 'uuid';
 
 export default function Home() {
 
@@ -99,13 +100,30 @@ export default function Home() {
 
 		return movies.filter(e=>e.title.includes(filterState)).map(e=>{
 			return (<MovieCard
-				key={Math.random()*192-4.002/43}
+				key={uuid()}
 				img={e.images.posterArt.url}
 				alt={e.title} movieTitle={e.title}
 				pubYear={e.releaseYear}
 				description={e.description}
 			/>)
 		})
+	}
+
+	function chargingMovies(){
+
+		// This module charge the first 10 movies and drive
+		// state changes each time the user is moving between pages
+
+		return movies.map(e=>{
+        	return (<MovieCard
+        		key={uuid()}
+        		img={e.images.posterArt.url}
+        		alt={e.title}
+        		movieTitle={e.title}
+        		pubYear={e.releaseYear}
+        		description={e.description}
+        	/>);	
+        }).filter((e,i)=>i<page*10&&i>=page*10-10);
 	}
 
 	// ---------------------------------------------------------------
@@ -134,19 +152,7 @@ export default function Home() {
         		<div className='movies-container'>
         			{
         				filterState?[...filterNames()]
-        				:(movies.map(e=>{
-
-        					return (<MovieCard
-        								key={Math.random()*192-4.002/43}
-        								img={e.images.posterArt.url}
-        								alt={e.title}
-        								movieTitle={e.title}
-        								pubYear={e.releaseYear}
-        								description={e.description}
-        							/>);
-        				
-        				})
-        					.filter((e,i)=>i<page*10&&i>=page*10-10)) 
+        				:[...chargingMovies()]
         			}
         		</div>
 
