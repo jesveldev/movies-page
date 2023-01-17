@@ -14,6 +14,8 @@ export default function Home() {
 	const [ page, setPage ] = useState(1); // For change the pages 
 	const [ filterState, setFilterState] = useState(''); // For filter words
 
+	const [ currentPage, setCurrentPage ] = useState([]);
+
 	useEffect(()=>{
 		fetch("https://static.rviewer.io/challenges/datasets/dreadful-cherry-tomatoes/data.json")
 		.then(e=>e.json())
@@ -58,11 +60,10 @@ export default function Home() {
 	}
 
 
-	function pageChanges(page){
+	function pageChanges(e,page){
 
 		// This is the function that are using the pages buttons for 
 		// change between pages
-
 		setPage(page);
 	}
 
@@ -133,7 +134,18 @@ export default function Home() {
         		<div className='movies-container'>
         			{
         				filterState?[...filterNames()]
-        				:(movies.map(e=><MovieCard key={Math.random()*192-4.002/43} img={e.images.posterArt.url} alt={e.title} movieTitle={e.title} pubYear={e.releaseYear} description={e.description}/>)
+        				:(movies.map(e=>{
+
+        					return (<MovieCard
+        								key={Math.random()*192-4.002/43}
+        								img={e.images.posterArt.url}
+        								alt={e.title}
+        								movieTitle={e.title}
+        								pubYear={e.releaseYear}
+        								description={e.description}
+        							/>);
+        				
+        				})
         					.filter((e,i)=>i<page*10&&i>=page*10-10)) 
         			}
         		</div>
@@ -149,12 +161,13 @@ export default function Home() {
 
 	        		{filterState?null:
 	        			definePagesNumber()
-	        				.map(e=>{
+	        				.map((e,i)=>{
 	        						return (
 	        							<button
 	        								className='page-button'
-	        								onClick={()=>pageChanges(e)}
-	        							>{e}</button>);
+	        								onClick={(event)=>pageChanges(event,e)}
+	        								style={ currentPage[i] }
+	        							>{e}</button>); 
 	        				}
 	        			)
 	        		}

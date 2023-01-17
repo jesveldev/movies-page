@@ -6,6 +6,7 @@ import React, { useState } from 'react';
 export default function Header() {
     return (
         <header className='header'>
+        // Welcome to the Rviewer React skeleton!
         	<figure className='logo-container'>
         		<img src= { Logo } title='Website logo' alt='Website logo'/>
         	</figure>
