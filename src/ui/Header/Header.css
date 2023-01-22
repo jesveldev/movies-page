@@ -16,14 +16,4 @@
   margin-left: 10%;
 }
 
-@media (max-width: 1000px) {
-  .header {
-    display: flex;
-    justify-content: center;
-  }
-  .header .logo-container img {
-    margin: 0;
-  }
-}
-
 /*# sourceMappingURL=Header.css.map */

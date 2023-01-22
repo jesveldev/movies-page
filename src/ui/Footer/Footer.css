@@ -34,7 +34,7 @@
     flex-flow: column nowrap;
   }
   .digital-stores-buttons .digital-store-button {
-    width: 50vw;
+    width: 30vw !important;
   }
 }
 

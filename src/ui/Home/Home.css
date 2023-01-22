@@ -73,4 +73,16 @@
   filter: invert(60%);
 }
 
+@media screen and (max-width: 1000px) {
+  .movies-container {
+    flex-flow: column wrap;
+    justify-content: center;
+    align-items: center;
+  }
+  .page-button {
+    font-size: 1.5em !important;
+    padding: 1.25% 2.5% !important;
+  }
+}
+
 /*# sourceMappingURL=Home.css.map */

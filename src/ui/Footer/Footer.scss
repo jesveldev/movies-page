@@ -37,11 +37,12 @@
 }
 
 @media screen and (max-width: 1000px){
+
 	.digital-stores-buttons{
 		flex-flow: column nowrap;
 
 		.digital-store-button{
-			width: 50vw;
+			width: 30vw !important;
 		}
 	}
 }
