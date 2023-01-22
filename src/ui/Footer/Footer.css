@@ -5,6 +5,7 @@
   flex-flow: column nowrap;
   background-color: black;
   color: white;
+  text-align: center;
 }
 .footer .footer-logo {
   width: 275px;
@@ -20,7 +21,21 @@
 .footer .digital-stores-buttons .digital-store-button {
   background-color: transparent;
   cursor: pointer;
-  transform: scale(0.85);
+  width: 23vw;
+  border: none;
+  outline: none;
+}
+.footer .digital-stores-buttons .digital-store-button img {
+  width: 100%;
+}
+
+@media screen and (max-width: 1000px) {
+  .digital-stores-buttons {
+    flex-flow: column nowrap;
+  }
+  .digital-stores-buttons .digital-store-button {
+    width: 50vw;
+  }
 }
 
 /*# sourceMappingURL=Footer.css.map */
